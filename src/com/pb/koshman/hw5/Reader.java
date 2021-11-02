@@ -38,6 +38,12 @@ public class Reader {
         this.phoneNumber = phoneNumber;
     }
 
+    public void takeBook(String fullName){
+        System.out.println(fullName + "взял 3 книги");
+    }
+
+
+
     public Reader(String fullName, int libraryCardNumber, String faculty, int dateBirth, String phoneNumber){
         this.fullName = fullName;
         this.libraryCardNumber = libraryCardNumber;

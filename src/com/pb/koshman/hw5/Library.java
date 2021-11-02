@@ -19,6 +19,5 @@ public class Library {
         for (int i = 0; i< readers.length; i++){
             System.out.println(readers[i].getInfo());
         }
-
     }
 }

@@ -17,9 +17,9 @@ public class Book {
             this.yearPublish = yearPublish;
             bookCount++;
     }
-    public Book(String name){
-        this.name = name;
-    }
+    //public Book(String name){
+    //    this.name = name;
+   // }
 
     String getInfo() {
         return "[Название: " + name + ", автор книги: " + author + ", год издания: "
