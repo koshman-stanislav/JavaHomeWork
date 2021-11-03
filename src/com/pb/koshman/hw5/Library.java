@@ -1,12 +1,14 @@
 package com.pb.koshman.hw5;
 
 
+import java.lang.reflect.Array;
+
 public class Library {
     public static void main(String[] args) {
         Book [] books = new Book[3];
-        books[0] = new Book("1000 и одна ночь","Шарипов",1659);
-        books[1] = new Book("JS для чайников","Данилов",2015);
-        books[2] = new Book("Сумашелшие в Мексике","Кидрук",2009);
+        books[0] = new Book("Приключения","Иванов И. И.",2000);
+        books[1] = new Book("Словарь","Сидоров А. В",1980);
+        books[2] = new Book("Энциклопедия","Гусев К. В.",2010);
 
         for (int i = 0; i< books.length; i++){
             System.out.println(books[i].getInfo());
@@ -19,5 +21,13 @@ public class Library {
         for (int i = 0; i< readers.length; i++){
             System.out.println(readers[i].getInfo());
         }
+
+        Reader reader1 = new Reader("Иванов И.И.", 12, "Биология", 1956, "0996483984");
+        reader1.setFullName("Петров В.В.");
+        reader1.takeBook(3);
+        reader1.takeBook("Приключения", "Словарь", "Энциклопедия");
+
+        reader1.returnBook(3);
+        reader1.returnBook("Приключения", "Словарь", "Энциклопедия");
     }
 }

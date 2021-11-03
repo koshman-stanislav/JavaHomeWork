@@ -4,9 +4,9 @@ public class Book {
     public static int getBookCount (){
         return bookCount;
     }
-    String name;
-    String author;
-    int yearPublish;
+    static String name;
+    static String author;
+    static int yearPublish;
     static int bookCount = 0;
 
     public Book(){
@@ -17,9 +17,6 @@ public class Book {
             this.yearPublish = yearPublish;
             bookCount++;
     }
-    //public Book(String name){
-    //    this.name = name;
-   // }
 
     String getInfo() {
         return "[Название: " + name + ", автор книги: " + author + ", год издания: "
@@ -44,5 +41,4 @@ public class Book {
     public void setYearPublish(int yearPublish) {
         this.yearPublish = yearPublish;
     }
-
 }
