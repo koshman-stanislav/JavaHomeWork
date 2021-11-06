@@ -32,8 +32,8 @@ public class Horse extends Animal{
 
     @Override
     public String toString() {
-        return "Horse{" +
-                "Выиграл заездов=" + victoryRaces +
-                '}';
+        return "Horse(" +
+                "Выиграл заездов: " + victoryRaces +
+                ')';
     }
 }

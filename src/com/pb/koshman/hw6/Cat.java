@@ -32,8 +32,8 @@ public class Cat extends Animal {
 
     @Override
     public String toString() {
-        return "Cat{" +
-                "Поймал мышей=" + caughtMice +
-                '}';
+        return "Cat(" +
+                "Поймал мышей: " + caughtMice +
+                ')';
     }
 }

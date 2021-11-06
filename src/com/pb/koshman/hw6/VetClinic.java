@@ -1,5 +1,7 @@
 package com.pb.koshman.hw6;
 
+import java.lang.reflect.Constructor;
+
 public class VetClinic {
     public static void main(String[] args) throws Exception{
 
@@ -35,14 +37,15 @@ public class VetClinic {
         horse.eat();
 
         Class vetClazz = Class.forName("com.pb.koshman.hw6.Veterinarian");
-        Constructor constr = vetClazz.getDeclaredConstructor(new Class[] {});
         Constructor constr = vetClazz.getConstructor(new Class[] {});
         Object obj = constr.newInstance();
 
-        Animal[] animals = new Animal[]{dog3,cat2,horse};
-        for(Animal a: animals){
-            if(obj instanceof Veterinarian)
+
+        Animal[] animals = new Animal[] {dog2,cat3,horse};
+        for (Animal a: animals) {
+            if (obj instanceof Veterinarian) {
                 ((Veterinarian) obj).treatAnimal(a);
+            }
         }
     }
 }
