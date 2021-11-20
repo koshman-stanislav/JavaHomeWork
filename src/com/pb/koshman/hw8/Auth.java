@@ -6,13 +6,18 @@ public class Auth {
     private String login;
     private String password;
 
-    public void signUp (String login, String password, String confirmPassword ){
+    public Auth (String login, String password){
+        this.login = login;
+        this.password = password;
+    }
+
+    public void signUp (String login, String password, String confirmPassword ) throws WrongLoginException{
         try {
 
         }
         catch ()
     }
-    public void signIn (String login, String password){
+    public void signIn (String login, String password) throws WrongPasswordException{
         try {
 
         }
