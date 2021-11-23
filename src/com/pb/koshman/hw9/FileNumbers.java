@@ -1,5 +1,7 @@
 package com.pb.koshman.hw9;
 
+import com.sun.deploy.nativesandbox.NativeSandboxOutputStream;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -31,6 +33,8 @@ public class FileNumbers {
         try (Scanner in = new Scanner(new File("numbers.txt"))) {
             PrintWriter pw = new PrintWriter(new File("odd-numbers.txt"));
             System.out.println("вывод чисел с заменой четных на 0:");
+
+
             while (in.hasNextLine()) {
                 Scanner line = new Scanner(in.nextLine());
                 while (line.hasNextInt()) {
@@ -43,11 +47,12 @@ public class FileNumbers {
                     pw.println(ch + " ");
                 }
                 line.close();
-                pw.println();
-
+                pw.println(" ");
             }
             System.out.println();
             pw.close();
+
+
         } catch (IOException ioException) {
             System.out.println("не удалось записать файл" + ioException);
         }
